@@ -1,0 +1,80 @@
+*
+{
+    margin:0%;
+    padding:0%;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+header
+{
+    background-color: rgb(53, 123, 227);
+    height:12vh;
+    
+}
+#hdiv
+{
+    display: flex;
+    justify-content:flex-end;
+    padding-right:6vw;
+}
+#but1
+{
+    background-color: rgb(0, 72, 255);
+    color:aliceblue;
+    height:30px;
+    width:50px;
+}
+#element
+{
+    display:flex;
+    /* flex-direction:; */
+    color: aliceblue;
+}
+#input1
+{
+    float: left;
+}
+#divmain{
+      margin-left :60vw;
+}
+body{
+    background-color:#e2e9ee;
+}
+#text
+{
+    text-decoration:none;
+    color: blue;
+}
+#but2
+{
+    background-color:rgb(7, 214, 69);
+    color:aliceblue;
+    border-radius:5px;
+    width:200px;
+    height:40px;
+    font-size:medium;
+    margin-left:0px;
+    text-align: center;
+}
+
+footer
+{
+    background-color: aliceblue;
+    height:20vh;
+    word-spacing:20px;
+    color: blue;
+}
+#fdiv
+{
+    margin : 0 20vw;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    margin:30px;
+}
+main > div > input{
+      padding:5px;
+}
+
+
+
