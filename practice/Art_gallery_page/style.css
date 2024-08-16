@@ -164,10 +164,11 @@
     }
     #black_page_1
     {
-        height:70vh;
-        width:40vw;
+        height:65vh;
+        width:35vw;
         background-image: url(photos/img1.jpg);
-        background-position:cover 70%;
+        background-position:center center;
+        background-size: cover;
 
     }
      /* #black_page_1 img
@@ -179,7 +180,88 @@
         height:70vh;
         width:100%;
     }  */
-    
+
+    #black_page_2
+    {
+        color :aliceblue;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #black_page_2 p{
+        margin-top: 20px;
+        font-size: large;
+        line-height: 1.6em;
+    }
+    #btn{
+        margin-top: 50px;
+        background-color: rgb(83, 145, 124);
+        color: aliceblue;
+        height: 50px;
+        width: 130px;
+        font-size: medium;
+    }  
+
+    #division_4
+    {
+        height: 195vh;
+    }
+
+    #d4_1 h1{
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    #d4_1 p{
+        text-align: center;
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom:40px;
+        line-height:1.6em;
+        font-size: large;
+    }
+    #d4_2
+    {
+        display: flex;
+        gap:30px;
+        height: 1%;
+        justify-content: center;
+    }
+    .d4_container{
+        height:100%;
+    }
+    .d4_container > div{
+        background-size: cover;
+        background-position: center center;
+        height:400px; 
+        width:25vw; 
+
+        margin-bottom:20px;
+    }
+    #d4_box1{
+        background-image:url(photos/img6.jpg);
+    }
+    #d4_box2{
+        background-image:url(photos/pexelsphoto587958.jpeg);
+    }
+    #d4_box3{
+        background-image:url(photos/img5.jpg);
+    }
+    #d4_box4{
+        background-image:url(photos/img2.jpg);
+    }
+    #d4_box5{
+        background-image:url(photos/img100.jpeg);
+    }
+    #d4_box6{
+        background-image: url(photos/pexelsphoto1988681.jpeg);
+    }
+    #division_5
+    {
+        background-color: aqua;
+        height: 40vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
 
