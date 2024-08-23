@@ -256,12 +256,162 @@
     }
     #division_5
     {
-        background-color: aqua;
+        background-color: #7da2a9;
+        color: aliceblue;
+        font-family: Ubuntu, sans-serif;
         height: 40vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
+    #division_5 h2{
+        font-size: 1.875rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #division_5 p{
+        font-size:1rem;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing:1px;
+    }
+
+
+    #division_6{
+        height:65vh;
+        display:flex;
+    }
+  
+    .img_div6{
+        height:100%;   
+        width:35%;
+        background-position:center;
+        background-size:cover;
+    }
+     
+    #img1_div6{
+        background-image: url(photos/img7.jpg);   
+    }
+    #img2_div6
+    {
+        background-image: url(photos/pexelsphoto1570779.jpeg);
+    }
+    #img3_div6{
+        background-image: url(photos/img4.jpg);
+    }
+
+
+    #division_7
+    {
+        height:80vh;
+        display: flex;
+    }
+
+    #div7_1{
+        background-color: #7da2a9;
+        height:100%;
+        width:50%;
+        color: aliceblue;
+    }
+    #div7_2{
+        background-color: #18181e;
+        height:100%;
+        width:50%;
+    }
+    #div7_1,#div7_2
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #div71_1
+    {
+        display: flex;
+        gap:20px;
+    }
+    #div71_1 i
+    {
+        font-size: larger;
+
+    }
+    #div7_1 h2
+    {
+        font-size: 1.87rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: Ubuntu, sans-serif;
+    }
+    #div7_1 p
+    {
+      font-size: 1rem;
+      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+    }
+    #div7_2
+    {
+        flex-direction: column;
+        gap:15px;
+    }
+    .div7input
+    {
+       padding: 15px 0px;
+       /* height:20px; */
+       width:65%;
+       background: transparent;
+       border:1.5px solid white;
+       font-size:15px;
+       font-weight: bold;
+       padding-left: 20px;
+
+
+
+    }
+    #div7input2
+    {
+       height:130px; 
+       width:65%;
+       background: transparent;
+       border:1.5px solid white;
+       font-size: 15px;
+       font-weight: bold;
+       padding-bottom: 80px;
+       padding-left: 20px;
+
+
+
+    }
+
+    #div7btn{
+        padding:12px 35px;
+        background-color: #c6d9dd;
+        color: #18181e;
+        font-size: 17px;
+        margin-right: 369.5px;
+    }
+    #div7btn:hover
+    {
+        color: white;
+    }
+    #division8
+    {
+        height:13vh;
+        background-color: #333333;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.8rem;
+        word-spacing:1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #divsion8 p > a
+    {
+        color:#c6d9dd;
+    }
+    
+    
+
+
+
 
 
 
