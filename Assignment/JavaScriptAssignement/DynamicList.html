@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            row-gap: 40px;
+        }
+        #d2
+        {
+            margin-top:150px;
+            margin-right: 50px;
+        }
+        #btn,#input{
+            padding: 5px;
+            font-size:medium;
+        }
+
+        ul{
+            font-size: x-large;
+            margin-right: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="d1">
+         <div id="d2">
+            <input type="text" id="input" placeholder="Input List Item">   
+             <button id="btn">Add To List</button>
+        </div>
+        <div id="d3">
+            <h1 style="margin-top: 70px;">DYNAMIC LIST</h1>
+            <br>
+            <!-- <ul>
+                <li>raj</li>
+                <li>raj</li>
+                <li>raj</li>
+                <li>raj</li>
+            </ul> -->
+        </div>
+    </div>
+    
+
+    <script>
+          let flag=0;
+          let newDiv;
+           document.getElementById("btn").addEventListener("click",()=>
+           {
+            if(flag==0)
+             {
+                 newDiv = document.createElement("div");
+                 newDiv.innerHTML = `
+                 <ul>
+                   <li>${document.getElementById("input").value}</li>
+                 </ul>
+               `;
+                document.getElementById("d3").appendChild(newDiv);
+
+                flag = 1;
+             }
+             else
+             {
+               const ul = document.querySelector("ul");
+               const li = document.createElement("li");
+
+               li.textContent = document.getElementById("input").value ;
+               ul.appendChild(li);
+
+             }
+               
+
+           });
+
+    </script>
+  
+
+</body>
+</html>
