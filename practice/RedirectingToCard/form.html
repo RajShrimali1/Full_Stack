@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <h1>Write Code To Open Card Page</h1>
+           <form id="formId" action="index.html">
+                <input type="text" placeholder="Code" id="input"> <br> <br>
+                <button type="submit" >Submit</button> <br> <br>
+           </form>
+
+           <script>
+               let count=3;
+               let newDiv = document.createElement("div");
+                       newDiv.style.height="100px";
+                       newDiv.style.width="200px";
+                       newDiv.style.fontSize="large";
+                       newDiv.style.display = "flex";          
+                       newDiv.style.justifyContent = "center"; 
+                       newDiv.style.alignItems = "center";
+
+                 document.getElementById("formId").addEventListener("submit",(item)=>{
+                       
+                       let input = document.getElementById("input").value;
+
+                       document.body.appendChild(newDiv);
+                       if(input === "Code")
+                       {
+                          document.getElementById("formId").setAttribute("action","index.html");
+                       }
+                       else
+                       {
+                          item.preventDefault();
+                          count--;
+                          if(count==0)
+                          {
+                            newDiv.textContent = "You lose";
+                            newDiv.style.backgroundColor="red";
+                            newDiv.style.color="white";
+                            newDiv.style.marginBottom="20px"
+                            
+                            let newDiv2 = document.createElement("div");
+                            newDiv2.textContent = "Try This code = 'Code'";
+                            newDiv2.style.backgroundColor="blue";
+                            newDiv2.style.color="white";
+                            newDiv2.style.height="100px";
+                            newDiv2.style.width="200px";
+                            newDiv2.style.fontSize="large";
+                            newDiv2.style.display = "flex";          
+                            newDiv2.style.justifyContent = "center"; 
+                            newDiv2.style.alignItems = "center";
+                            
+                            document.body.appendChild(newDiv2);
+                            
+                            count=3;
+                        }
+                        else if(count>0)
+                        {
+                            newDiv.textContent = `Wrong Ans \n \n Chanches remaining = ${count}`;
+                            newDiv.style.backgroundColor="red";
+                            newDiv.style.color="white";
+                        
+                          }
+
+                       }
+                 })
+                
+           </script>
+</body>
+</html>
