@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="div1">
+        <h1>Image Visibility Toggling Program</h1>
+        <br>
+        <img src="pexelsphoto1988681.jpeg" alt="image" height="500px" id="image">
+        <br>
+        <br>
+        <button id="btn">TOGGLE VISIBILITY</button>
+    </div>
+    <script>
+         document.getElementById("btn").addEventListener("click",()=>{
+
+            let image = document.getElementById("image");
+
+             if(image.style.visibility === "hidden")
+             {
+                image.style.visibility = "inherit";
+             }
+             else
+             {
+                image.style.visibility = "hidden";
+             }
+         });
+    </script>
+</body>
+</html>

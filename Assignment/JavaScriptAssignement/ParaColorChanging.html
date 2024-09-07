@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Harum placeat repellendus architecto ut perferendis deserunt suscipit nisi, beatae esse <br> quia mollitia eligendi, ullam sequi ratione. <br> Totam similique minima iste aut.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni  <br>tempore, eligendi nisi, magnam sint inventore ipsum nobis possimus ullam quae, porro  <br> saepe quisquam accusantium sequi. Mollitia <br> accusantium dolor porro facere.</p>
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Iste distinctio illum enim ipsa facere reiciendis asperiores voluptatem earum laudantium <br> tenetur repellendus blanditiis laborum, <br> quam dolores sunt eius quod ea praesentium.</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Iste distinctio illum enim ipsa facere reiciendis asperiores voluptatem earum laudantium <br> tenetur repellendus blanditiis laborum, <br> quam dolores sunt eius quod ea praesentium.</p>
+    <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Iste distinctio illum enim ipsa facere reiciendis asperiores voluptatem earum laudantium <br> tenetur repellendus blanditiis laborum, <br> quam dolores sunt eius quod ea praesentium.</p>
+
+    <button id="btn">Change Color</button>
+
+    <script>
+  
+     document.getElementById("btn").addEventListener("click",()=>{
+        for(let i=0;i<5;i++)
+        {
+           document.querySelectorAll("p").forEach((element)=>{
+            element.style.backgroundColor = "blue";
+            element.style.color="white";
+           })
+           
+       }
+     });
+    </script>
+</body>
+</html>
