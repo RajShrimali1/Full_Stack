@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+#div1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+h1{
+    color: yellow;
+    font-family: sans-serif;
+    text-shadow: 2px 0px 2px white;
+}
+
+#divCentre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+
+}
+
+#img{
+    height: 200px;
+    animation: imageAnimation 2s linear infinite;
+}
+
+@keyframes imageAnimation {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+button{
+    border-radius:100px;
+    width:50px;
+    height:50px;
+    color: aliceblue;
+    margin-right:10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#start{
+    background-color: rgb(0, 255, 0);
+}
+#stop{
+    background-color: red;
+}
+#regulate1 , #regulate2 , #regulate3{
+    background-color:blue;
+}
+
+#stop:active{
+    background-color: rgb(172, 0, 0);
+}
+#start:active{
+    background-color: rgb(0, 148, 0);
+}
+#regulate1:active , #regulate2:active , #regulate3:active{
+    background-color:rgb(0, 0, 166);
+}
