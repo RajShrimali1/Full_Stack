@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Responsive columns */
+            gap: 10px; /* Space between grid items */
+       
+            justify-items: center; /* Center the content inside each grid item */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container" id="productGrid"></div>
+    <script>
+          fetch("https://fakestoreapi.com/products")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+               
+                data.forEach((e) => {
+                    let newDiv = document.createElement("div");
+                    newDiv.style.height = "250px";
+                    newDiv.style.width = "350px";
+                    newDiv.style.marginBottom = "10px"
+                    newDiv.style.backgroundColor="yellow"
+                    newDiv.innerHTML = `<img src="${e.image}" style="height:55px">` + 
+                         `<p> id : ${e.id} <br> ` +
+                          `title : ${e.title}<br>` +
+                          `price : ${e.price} </p>`
+                          productGrid.appendChild(newDiv)      
+                });       
+            })
+          .catch(error => {
+        console.log(error);
+       });
+           
+
+
+    </script>
+</body>
+
+</html>
+
+
