@@ -1,0 +1,10 @@
+import React from 'react'
+import ProductList from './api/ProductList'
+
+function App() {
+  return (
+    <ProductList />
+  )
+}
+
+export default App
