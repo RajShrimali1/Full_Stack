@@ -1,0 +1,120 @@
+main{
+    background-image:url(photos/photo.jpg);
+    height:77vh;
+    background-size: cover;
+    background-position:center 30%;
+    /* object-fit: contain; */
+}
+nav
+{
+    height:10vh;
+} 
+    #d1
+    {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+         margin-top:20px;
+         color: black;
+    }
+    #d2
+    {
+        display: flex;
+        gap:20px;
+        
+    }
+    #d3
+    {  gap:30px;
+        /* margin:30px; */
+        display:flex;
+        margin-right:50px;
+        font-size:x-large;
+    }
+#but1
+{
+     width:10vw;
+     height:5vh;
+     background-color: rgb(232, 45, 45);
+     font-size: large;
+}
+
+*
+{
+    margin:0%;
+    padding:0%
+}
+
+footer{
+     height:10.5vh;
+}
+#fd1
+{    height:10.5vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+#fd2
+{       font-size:xx-large;
+        font-weight: 600;
+        margin-left:3vw;
+}
+#fd3
+{      
+        margin-right:5vw;
+}
+#fd3 > #input1
+{
+    padding: 8px;
+    width:15vw;  
+    margin-right:5px;
+    font-size: medium;  
+}
+#fd3 > #but2
+{
+    padding: 10px;
+    width:12vw;  
+    background-color: rgb(68, 234, 234);  
+    /* border:none; */
+    border-radius:3px;
+}
+#md{
+    height:100%;
+    color: aliceblue;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: end;
+    margin-right: 150px;
+    
+}
+#md1
+{
+    font-size: xx-large;
+    margin-bottom: 15px;
+}
+#md2
+{
+    font-size: x-large;
+    margin-right:110px;
+    margin-bottom: 30px;
+}
+#md3
+{
+    font-size: larger;
+    margin-right:190px;
+    margin-bottom: 200px;
+}
+#but3
+{     
+    padding:10px;
+    width:200px;
+    color: aliceblue;
+    border:2px solid white;
+    background:transparent;
+    font-size: large;
+
+}
+*
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
