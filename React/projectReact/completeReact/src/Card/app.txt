@@ -1,0 +1,70 @@
+import { useState } from "react"
+import Img from "./Card/Img"
+import img1 from './assets/photos/img1.jpeg'
+import img2 from './assets/photos/img2.jpeg'
+import img3 from './assets/photos/img3.jpeg'
+import img4 from './assets/photos/img4.jpg'
+import img5 from './assets/photos/img5.jpg'
+import img6 from './assets/photos/img6.jpg'
+import img7 from './assets/photos/img7.jpg'
+import img8 from './assets/photos/img8.jpeg'
+      
+function App() {
+  const girl = true;
+  const [count,setCount] = useState(5);
+  const [card,setCard] = useState([
+    {title:"image1", id:"1" , dis:"1st image" ,image:img1 ,bgColor:"bg-purple-400"},
+    {title:"image2" ,id:"2" ,dis:"2nd image" ,image:img2 ,bgColor:"bg-blue-500"},
+    {title:"image3", id:"3" ,dis:"3rd image" ,image:img3, bgColor:"bg-green-400" },
+    {title:"image4", id:"4", dis:"4th image", image:img4 ,bgColor:"bg-yellow-200"}
+  ])
+  
+  const colorArray =["bg-purple-400","bg-blue-500","bg-green-400","bg-yellow-200","bg-red-500" ,"bg-slate-600" ,"bg-orange-400"];
+  
+  const imgArray =[img1,img2,img3,img4,img5,img6,img7,img8];
+
+  function randomColor(){
+      return colorArray[Math.floor(Math.random()*7)];
+  }
+  function randomImg(){
+      return imgArray[Math.floor(Math.random()*8)];
+  }
+
+  function addCardBtn (){
+    setCard(preCard=>[
+      ...preCard,
+      { title: `image${count}`, // Dynamic title
+      id: `${count}`,          // Dynamic id
+      dis: `${count}th image`, // Dynamic description
+      image: randomImg(), 
+      bgColor:randomColor()}
+    ])
+     setCount(count+1);
+  }
+
+  return (
+    <>
+     <div className='grid grid-cols-4 gap-y-3 '>
+       {
+         card.map(card =>{
+          return (
+
+            <Img 
+               title={card.title}
+               dis={card.dis}
+               id={card.id}
+               image={card.image}
+               bgColor={card.bgColor}
+            />      
+          )
+         })
+       }
+        
+     </div>
+        <button className="border-2 border-black mt-3 mb-7 w-32 p-3 bg-blue-400 active:bg-blue-500" onClick={addCardBtn}>Add card</button>
+
+    </>
+  )
+}
+
+export default App
