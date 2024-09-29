@@ -22,7 +22,7 @@ function ToDolist() {
                 <h1 className='text-xl text-center'>TODO LIST</h1>
                 <div className='flex justify-center items-center mt-4 mb-14'>
                     <input type="text" className='border-black border-2 w-96 p-1' onChange={inputHandller} />
-                    <button className='bg-blue-500 active:bg-blue-6 00 p-1 w-96 border-black border-2' onClick={BtnHandller}>ADD TO LIST</button>
+                    <button className='bg-blue-500 active:bg-blue-600 p-1 w-96 border-black border-2' onClick={BtnHandller}>ADD TO LIST</button>
                 </div>
                 <DisplayList list={list} setList={setList}/>
             </div>
