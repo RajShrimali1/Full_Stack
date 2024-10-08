@@ -1,0 +1,17 @@
+import React from 'react'
+import Cart from './Cart/Cart'
+import Item from './Cart/Item'
+function App() {
+  return (
+    <>
+    <div className='h-screen w-screen flex flex-col justify-center items-center bg-gray-700'>
+      <Item product={"Phone"} price={20000}/>
+      <Item product={"Tablet"} price={30000}/>
+      <Item product={"Laptop"} price={60000}/>
+      <Cart />
+    </div>
+    </>
+  )
+}
+
+export default App
