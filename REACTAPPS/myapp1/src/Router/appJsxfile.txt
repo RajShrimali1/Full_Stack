@@ -1,0 +1,94 @@
+
+import { createBrowserRouter,createRoutesFromElements,RouterProvider,Route } from "react-router-dom"
+
+// import Exporter from "./GitAPIWithRouter/Exporter"
+
+import Navigation from "./Router/GitAPIWithRouter/Navigation";
+import Footer from "./Router/GitAPIWithRouter/Components/Footer";
+import Home from "./Router/GitAPIWithRouter/Components/Home";
+import Login from "./Router/GitAPIWithRouter/Components/Login";
+import About from "./Router/GitAPIWithRouter/Components/About";
+import Contact from "./Router/GitAPIWithRouter/Components/Contact";
+import User from "./Router/GitAPIWithRouter/Components/User";
+
+
+
+
+export default function App() {  
+
+    
+    /////////////////////// method 1 (example)
+
+   const router = createBrowserRouter([
+    {
+      path:"/",
+      element:<><Navigation /><Home /></>
+    },
+    {
+      path:"/login",
+      element:<><Navigation /><Login /></>
+    },
+    {
+      path:"/contect",
+      element:<><Navigation /><Contect /></>
+    },
+    {
+      path:"/user/:username",
+      element:<><Navigation /><User /></>
+    }
+   ]) 
+
+
+   ////////////////   method 2  (working)
+
+   
+     const router = createBrowserRouter(
+       createRoutesFromElements(
+         <Route path="/" element={<><Navigation /><Footer /></>}>
+             <Route path="" element={<Home />}/>
+             <Route path="Login" element={<Login />}/>
+             <Route path="AboutUs" element={<About />}/>
+             <Route path="Contact" element={<Contact />}/>
+             <Route path="User/:username" element={<User />}/>
+         </Route>
+       )
+     )
+
+  return (
+    <>
+      
+        <RouterProvider router={router}/> 
+    </>
+  )
+}
+
+
+
+///// method 3 
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import Exporter from './Router/GitAPIWithRouter/Exporter'
+
+const App = () => {
+  <Exporter />
+  return (
+    <div>
+      <BrowserRouter>
+        <Exporter.Navigation/>
+        <Routes>
+          <Route path='/login' element={<Exporter.Login />} />
+          <Route path="/About" element={<Exporter.About />} />
+          <Route path="/Contact" element={<Exporter.Contact />} />
+          <Route path="/Github" element={<Exporter.Github />} />
+          <Route path="/" element={<Exporter.Home />} />
+          <Route path="/User/:username" element={<Exporter.User />} />
+        </Routes>
+        <Exporter.Footer/>
+      </BrowserRouter>
+
+    </div>
+  )
+}
+
+export default App
