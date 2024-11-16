@@ -1,0 +1,17 @@
+import React from 'react'
+import CardApi from './Router_Api/CardApi'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import SingleCard from './Router_Api/SingleCard'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+         <Route path='/' element={<CardApi />}/>
+         <Route path='/:id' element={<SingleCard />}/>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
